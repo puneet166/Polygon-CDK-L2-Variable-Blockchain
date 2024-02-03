@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Only run lint if .go files changed
-git diff --cached --name-only | if grep --quiet ".*go$"
-then
-  make lint
-fi

@@ -1,0 +1,785 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x567CbEbc0824a83d88816078c924Ea80BA1eb6a0"
+  },
+  "proxies": [
+    {
+      "address": "0x235EC2dC686BcF20D676Ce4cFcC8827db16F5917",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xfa412719ba053008FbB0850b7605A92d000Fd8B6",
+      "txHash": "0x411229a635dac59a857a4ea32f4fd324c84610e55de468eb71da09564d739fcd",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xF6E2f8a996c2B832e58996e36952cd0c8a08e82D",
+      "txHash": "0x0eb9170b53ed134716599305f1b074b87f3f750cae8a5d8cb7db758931eaa24c",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3509953a690bdDe964eBA9b4621642e86B228CDe",
+      "txHash": "0x5b5213521407965a174a6915aaba1f15c5e4356634fb214dbc2e5168ce59fa0a",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "42f816355510d8c3c338a67c7ed599d4b8aba172938b3b95547ce33866216784": {
+      "address": "0x911d1175174C6b16FB30EC613D9977cdc450aECe",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "_branch",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_bytes32)32_storage",
+            "contract": "DepositContract",
+            "src": "contracts/lib/DepositContract.sol:25"
+          },
+          {
+            "label": "depositCount",
+            "offset": 0,
+            "slot": "83",
+            "type": "t_uint256",
+            "contract": "DepositContract",
+            "src": "contracts/lib/DepositContract.sol:28"
+          },
+          {
+            "label": "_gap",
+            "offset": 0,
+            "slot": "84",
+            "type": "t_array(t_uint256)10_storage",
+            "contract": "DepositContract",
+            "src": "contracts/lib/DepositContract.sol:34"
+          },
+          {
+            "label": "_gap",
+            "offset": 0,
+            "slot": "94",
+            "type": "t_array(t_uint256)10_storage",
+            "contract": "EmergencyManager",
+            "src": "contracts/lib/EmergencyManager.sol:23"
+          },
+          {
+            "label": "isEmergencyState",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_bool",
+            "contract": "EmergencyManager",
+            "src": "contracts/lib/EmergencyManager.sol:26"
+          },
+          {
+            "label": "networkID",
+            "offset": 1,
+            "slot": "104",
+            "type": "t_uint32",
+            "contract": "PolygonZkEVMBridge",
+            "src": "contracts/PolygonZkEVMBridge.sol:51"
+          },
+          {
+            "label": "globalExitRootManager",
+            "offset": 5,
+            "slot": "104",
+            "type": "t_contract(IBasePolygonZkEVMGlobalExitRoot)10779",
+            "contract": "PolygonZkEVMBridge",
+            "src": "contracts/PolygonZkEVMBridge.sol:54"
+          },
+          {
+            "label": "lastUpdatedDepositCount",
+            "offset": 25,
+            "slot": "104",
+            "type": "t_uint32",
+            "contract": "PolygonZkEVMBridge",
+            "src": "contracts/PolygonZkEVMBridge.sol:57"
+          },
+          {
+            "label": "claimedBitMap",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "PolygonZkEVMBridge",
+            "src": "contracts/PolygonZkEVMBridge.sol:60"
+          },
+          {
+            "label": "tokenInfoToWrappedToken",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_mapping(t_bytes32,t_address)",
+            "contract": "PolygonZkEVMBridge",
+            "src": "contracts/PolygonZkEVMBridge.sol:63"
+          },
+          {
+            "label": "wrappedTokenToTokenInfo",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_mapping(t_address,t_struct(TokenInformation)9024_storage)",
+            "contract": "PolygonZkEVMBridge",
+            "src": "contracts/PolygonZkEVMBridge.sol:66"
+          },
+          {
+            "label": "polygonZkEVMaddress",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_address",
+            "contract": "PolygonZkEVMBridge",
+            "src": "contracts/PolygonZkEVMBridge.sol:69"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_bytes32)32_storage": {
+            "label": "bytes32[32]",
+            "numberOfBytes": "1024"
+          },
+          "t_array(t_uint256)10_storage": {
+            "label": "uint256[10]",
+            "numberOfBytes": "320"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(IBasePolygonZkEVMGlobalExitRoot)10779": {
+            "label": "contract IBasePolygonZkEVMGlobalExitRoot",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_struct(TokenInformation)9024_storage)": {
+            "label": "mapping(address => struct PolygonZkEVMBridge.TokenInformation)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_address)": {
+            "label": "mapping(bytes32 => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(TokenInformation)9024_storage": {
+            "label": "struct PolygonZkEVMBridge.TokenInformation",
+            "members": [
+              {
+                "label": "originNetwork",
+                "type": "t_uint32",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "originTokenAddress",
+                "type": "t_address",
+                "offset": 4,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint32": {
+            "label": "uint32",
+            "numberOfBytes": "4"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "27229be131bac448e1a36265fd70db8882cf9e6cb94a91223922c21846a414ba": {
+      "address": "0x2150460D620B0f71a464bDef129Ee93EEcda6648",
+      "txHash": "0x8d379979fb7cb229603e32d8c68aeab8c8f084c00f87c7386a53e9030e9c7954",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "requiredAmountOfSignatures",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_uint256",
+            "contract": "CDKDataCommittee",
+            "src": "contracts/CDKDataCommittee.sol:26"
+          },
+          {
+            "label": "committeeHash",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_bytes32",
+            "contract": "CDKDataCommittee",
+            "src": "contracts/CDKDataCommittee.sol:29"
+          },
+          {
+            "label": "members",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_array(t_struct(Member)6013_storage)dyn_storage",
+            "contract": "CDKDataCommittee",
+            "src": "contracts/CDKDataCommittee.sol:32"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Member)6013_storage)dyn_storage": {
+            "label": "struct CDKDataCommittee.Member[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Member)6013_storage": {
+            "label": "struct CDKDataCommittee.Member",
+            "members": [
+              {
+                "label": "url",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "addr",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "d057e2aa88dfa807b23ed28f4b10dcf37ddde0f74c9a3abe93335e642718092c": {
+      "address": "0x5CB28492102ccD9B641DA5ba1DCA197bEd9C6E3F",
+      "txHash": "0x9f500c2179e0b9c7ea2aa574e78a29b3b1a5ad33d849e31ca4b810b1056e7eca",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "lastRollupExitRoot",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bytes32",
+            "contract": "PolygonZkEVMGlobalExitRoot",
+            "src": "contracts/PolygonZkEVMGlobalExitRoot.sol:19"
+          },
+          {
+            "label": "lastMainnetExitRoot",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bytes32",
+            "contract": "PolygonZkEVMGlobalExitRoot",
+            "src": "contracts/PolygonZkEVMGlobalExitRoot.sol:22"
+          },
+          {
+            "label": "globalExitRootMap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_bytes32,t_uint256)",
+            "contract": "PolygonZkEVMGlobalExitRoot",
+            "src": "contracts/PolygonZkEVMGlobalExitRoot.sol:25"
+          }
+        ],
+        "types": {
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "f9445812ad009a27b71e8258aec5e0e1bd09b2da1fcfb481d10c4e1c9c830807": {
+      "address": "0xE6292840b9d03c9A56f6e3c4deb3B77d1f75801D",
+      "txHash": "0xb564acdfb6544b8fc2d67a1b09217bae40e474924c47faa776e9b64744617846",
+      "layout": {
+        "solcVersion": "0.8.20",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "_gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)10_storage",
+            "contract": "EmergencyManager",
+            "src": "contracts/lib/EmergencyManager.sol:23"
+          },
+          {
+            "label": "isEmergencyState",
+            "offset": 0,
+            "slot": "111",
+            "type": "t_bool",
+            "contract": "EmergencyManager",
+            "src": "contracts/lib/EmergencyManager.sol:26"
+          },
+          {
+            "label": "verifyBatchTimeTarget",
+            "offset": 1,
+            "slot": "111",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:171"
+          },
+          {
+            "label": "multiplierBatchFee",
+            "offset": 9,
+            "slot": "111",
+            "type": "t_uint16",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:174"
+          },
+          {
+            "label": "trustedSequencer",
+            "offset": 11,
+            "slot": "111",
+            "type": "t_address",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:177"
+          },
+          {
+            "label": "batchFee",
+            "offset": 0,
+            "slot": "112",
+            "type": "t_uint256",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:180"
+          },
+          {
+            "label": "forcedBatches",
+            "offset": 0,
+            "slot": "113",
+            "type": "t_mapping(t_uint64,t_bytes32)",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:186"
+          },
+          {
+            "label": "sequencedBatches",
+            "offset": 0,
+            "slot": "114",
+            "type": "t_mapping(t_uint64,t_struct(SequencedBatchData)6376_storage)",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:190"
+          },
+          {
+            "label": "lastTimestamp",
+            "offset": 0,
+            "slot": "115",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:193"
+          },
+          {
+            "label": "lastBatchSequenced",
+            "offset": 8,
+            "slot": "115",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:196"
+          },
+          {
+            "label": "lastForceBatchSequenced",
+            "offset": 16,
+            "slot": "115",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:199"
+          },
+          {
+            "label": "lastForceBatch",
+            "offset": 24,
+            "slot": "115",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:202"
+          },
+          {
+            "label": "lastVerifiedBatch",
+            "offset": 0,
+            "slot": "116",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:205"
+          },
+          {
+            "label": "trustedAggregator",
+            "offset": 8,
+            "slot": "116",
+            "type": "t_address",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:208"
+          },
+          {
+            "label": "batchNumToStateRoot",
+            "offset": 0,
+            "slot": "117",
+            "type": "t_mapping(t_uint64,t_bytes32)",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:212"
+          },
+          {
+            "label": "trustedSequencerURL",
+            "offset": 0,
+            "slot": "118",
+            "type": "t_string_storage",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:215"
+          },
+          {
+            "label": "networkName",
+            "offset": 0,
+            "slot": "119",
+            "type": "t_string_storage",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:218"
+          },
+          {
+            "label": "pendingStateTransitions",
+            "offset": 0,
+            "slot": "120",
+            "type": "t_mapping(t_uint256,t_struct(PendingState)6386_storage)",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:222"
+          },
+          {
+            "label": "lastPendingState",
+            "offset": 0,
+            "slot": "121",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:225"
+          },
+          {
+            "label": "lastPendingStateConsolidated",
+            "offset": 8,
+            "slot": "121",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:228"
+          },
+          {
+            "label": "pendingStateTimeout",
+            "offset": 16,
+            "slot": "121",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:231"
+          },
+          {
+            "label": "trustedAggregatorTimeout",
+            "offset": 24,
+            "slot": "121",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:235"
+          },
+          {
+            "label": "admin",
+            "offset": 0,
+            "slot": "122",
+            "type": "t_address",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:238"
+          },
+          {
+            "label": "pendingAdmin",
+            "offset": 0,
+            "slot": "123",
+            "type": "t_address",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:241"
+          },
+          {
+            "label": "forceBatchTimeout",
+            "offset": 20,
+            "slot": "123",
+            "type": "t_uint64",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:244"
+          },
+          {
+            "label": "isForcedBatchDisallowed",
+            "offset": 28,
+            "slot": "123",
+            "type": "t_bool",
+            "contract": "CDKValidium",
+            "src": "contracts/CDKValidium.sol:247"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)10_storage": {
+            "label": "uint256[10]",
+            "numberOfBytes": "320"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(PendingState)6386_storage)": {
+            "label": "mapping(uint256 => struct CDKValidium.PendingState)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint64,t_bytes32)": {
+            "label": "mapping(uint64 => bytes32)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint64,t_struct(SequencedBatchData)6376_storage)": {
+            "label": "mapping(uint64 => struct CDKValidium.SequencedBatchData)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(PendingState)6386_storage": {
+            "label": "struct CDKValidium.PendingState",
+            "members": [
+              {
+                "label": "timestamp",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "lastVerifiedBatch",
+                "type": "t_uint64",
+                "offset": 8,
+                "slot": "0"
+              },
+              {
+                "label": "exitRoot",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "stateRoot",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(SequencedBatchData)6376_storage": {
+            "label": "struct CDKValidium.SequencedBatchData",
+            "members": [
+              {
+                "label": "accInputHash",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "sequencedTimestamp",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "previousLastBatchSequenced",
+                "type": "t_uint64",
+                "offset": 8,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint16": {
+            "label": "uint16",
+            "numberOfBytes": "2"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
