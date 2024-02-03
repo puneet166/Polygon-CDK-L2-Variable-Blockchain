@@ -1,0 +1,43 @@
+## Deployment Address
+Address: 0xBa6801FbEB15777F6Cd3f0663Cf00B2659DA3214
+PrvKey: 0x57cec3760d4fbcd025b824302f27403d116cca1583134507e4e2797501272d1b
+mnemonic: "glare drop fatigue raw fancy biology penalty end hockey pill width magic"
+keystore: {"address":"ba6801fbeb15777f6cd3f0663cf00b2659da3214","id":"253e5bd2-5fe0-45e8-9fb0-1b11a0552bad","version":3,"crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"1f587e0356a14ef0bf72228949c376d4"},"ciphertext":"4552ac39f12d8bd3a1d1c14f8bd7708dba0006199faf9d42b5b0f60b00c19270","kdf":"scrypt","kdfparams":{"salt":"c463234bba138698fcc557f0eac615da6f16fec1d8d17f0bd1cfc37dc4445ef2","n":131072,"dklen":32,"p":1,"r":8},"mac":"5624357df94a941eaf6655f3874d81f06b431a97f7d2162f9a3becca181dabb2"},"x-ethers":{"client":"ethers.js","gethFilename":"UTC--2024-02-01T04-04-20.0Z--ba6801fbeb15777f6cd3f0663cf00b2659da3214","mnemonicCounter":"0cf3cb100f549fe4ce23c2d373f13b92","mnemonicCiphertext":"148d63b59c627a7b6490c1dabcc816bb","path":"m/44'/60'/0'/0/0","locale":"en","version":"0.1"}}
+
+
+\n\n## Trusted sequencer
+Address: 0x20B8c692d9D4441f0ca954320E156d8f0d86E873
+PrvKey: 0xdcc6dc9ad695686b94e4ff0cca973984f82104b075b6ab8643d667e915656553
+mnemonic: "spoil frame system have hood move shaft beyond grab wolf label habit"
+keystore: {"address":"20b8c692d9d4441f0ca954320e156d8f0d86e873","id":"adb01a6f-8cee-42d1-9e1b-c46973153a1a","version":3,"crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"9f9448878d6d415ec3beacfeb42fd1e8"},"ciphertext":"2e7c87cb1e64d2629d5c90545110cffc35814bacfd959fce5033d9e219b3f34b","kdf":"scrypt","kdfparams":{"salt":"fe161fde4d52aded27062e4a063a302bb8b95754d38c0b3f02fc514ef75bc816","n":131072,"dklen":32,"p":1,"r":8},"mac":"8a4adb05ff772d13a90f1e28f9eb71c86e5f71058ba447a251a816faab026995"},"x-ethers":{"client":"ethers.js","gethFilename":"UTC--2024-02-01T04-04-22.0Z--20b8c692d9d4441f0ca954320e156d8f0d86e873","mnemonicCounter":"49d59370073f1bd575a5fa98c79a1a22","mnemonicCiphertext":"1fb7bb24737b07b6739af86f6003d49b","path":"m/44'/60'/0'/0/0","locale":"en","version":"0.1"}}
+
+
+
+\n\n## Trusted aggregator
+Address: 0xd00f3EC8C81468657a8DeE120E64f49947eD2e5a
+PrvKey: 0x4a7ef7efd47d46b6b5c1dcae25b96adaf5dc71fadc553e643348d7ca1fb8e813
+mnemonic: "dutch museum clean cactus future usage pass assume blue mixture maximum action"
+keystore: {"address":"d00f3ec8c81468657a8dee120e64f49947ed2e5a","id":"d7037b6c-2199-43b7-9664-eed3f4543748","version":3,"crypto":{"cipher":"aes-128-ctr","cipherparams":{"iv":"ce01aec1c63f844cd66c9ebafeedcb4a"},"ciphertext":"c2b685e278b97c9a0b96f5283c06a6a8c981e2561ff9f85878ba0801a1c55a53","kdf":"scrypt","kdfparams":{"salt":"5187336280286a0d84ce613e995be34f8d3bcae8324ac1535d4f620bd9dabd25","n":131072,"dklen":32,"p":1,"r":8},"mac":"51f1124f9f02c98d87ba58d646dd919419f4ff6b2932c1dd9400b4d8a9bb7ebc"},"x-ethers":{"client":"ethers.js","gethFilename":"UTC--2024-02-01T04-04-23.0Z--d00f3ec8c81468657a8dee120e64f49947ed2e5a","mnemonicCounter":"fd17244691f026ecad87652676e9ef55","mnemonicCiphertext":"f03e0ff33e382f627a45478ce49caa8f","path":"m/44'/60'/0'/0/0","locale":"en","version":"0.1"}}
+root@ubuntu-16gb-variable-node-2:~/cdk-validium-contracts-0.0.2-RC1# 
+
+
+
+docker run -d -v .:/key hermeznetwork/zkevm-node /app/zkevm-node encryptKey --pk 0x4a7ef7efd47d46b6b5c1dcae25b96adaf5dc71fadc553e643348d7ca1fb8e813 --pw testonly -o /key
+
+
+
+ ./zkevm-node run --network custom --custom-network-file ./genesisReal.json --cfg ./configReal.toml --components synchronizer
+
+./zkevm-node run --network custom --custom-network-file ./genesisReal.json --cfg ./configReal.toml --components eth-tx-manager
+
+
+./zkevm-node run --network custom --custom-network-file ./genesisReal.json --cfg ./configReal.toml --components sequencer
+
+./zkevm-node run --network custom --custom-network-file ./genesisReal.json --cfg ./configReal.toml --components sequence-sender
+
+./zkevm-node run --network custom --custom-network-file ./genesisReal.json --cfg ./configReal.toml --components l2gaspricer
+
+
+./zkevm-node run --network custom --custom-network-file ./genesisReal.json --cfg ./configReal.toml --components aggregator
+
+./zkevm-node run --network custom --custom-network-file ./genesisReal.json --cfg ./configReal.toml --components rpc
