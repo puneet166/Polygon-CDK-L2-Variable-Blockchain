@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+  zkevm-bridge-db:
+    container_name: zkevm-bridge-db
+    image: postgres
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
+    expose:
+      - 5435
+    ports:
+      - 5435:5432
+    environment:
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=test_password
+      - POSTGRES_DB=test_db
+    command: ["postgres", "-N", "500"]
