@@ -13,7 +13,7 @@ services:
       environment:
         - JSONRPC_HTTP_URL=https://powerful-aged-asphalt.ethereum-sepolia.quiknode.pro/c098b6f06418c7a2e872d7ddf99fe756a613257a/
         - DAC_URL=http://37.27.27.226:50062
-        - DAC_ADDRESS=0xd00f3EC8C81468657a8DeE120E64f49947eD2e5a
+        - DAC_ADDRESS=0xd00f3EC8C81468657a8DeE120E64f49947eD2e5a //Trusted aggregator address from generred key
         - DEPLOYER_PRIVATE_KEY=0x57cec3760d4fbcd025b824302f27403d116cca1583134507e4e2797501272d1b
       command:
         - "/bin/sh"
